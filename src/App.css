@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(197, 228, 231, 1);
+}
+
+
+.appContainer{
+    width: 900px;
+    height: 480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+
+.billContainer{
+    width: 380px;
+    height: 78px;
+    margin-left: 48px;
+}
+
+.billContainer input{
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: center;
+    cursor: pointer;
+    background-color: #F3F9FA;
+    border-radius: 5px;
+
+    width: 380px;
+    height: 48px;
+    padding-right: 15px;
+
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #00474B;
+}
+
+.percentContainer{
+    width: 400px;
+    height: 152px;
+    margin-left: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.percentContainer .percent{
+    cursor: pointer;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 5px;
+    width: 118px;
+    height: 48px;
+    background: #00474B;
+    border-radius: 5px;
+    margin-right: 14px;
+}
+
+.percentContainer .custom{
+    cursor: pointer;
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #547878;
+    text-align: center;
+
+    padding-right: 10px;
+    width: 118px;
+    height: 48px;
+    background: #F3F9FA;
+    border-radius: 5px;
+    margin-right: 14px;
+}
+
+
+.personContainer{
+    width: 380px;
+    height: 78px;
+    margin-left: 48px;
+}
+
+.personContainer input{
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: center;
+    cursor: pointer;
+    background-color: #F3F9FA;
+    border-radius: 5px;
+
+    width: 380px;
+    height: 48px;
+    padding-right: 15px;
+
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #00474B;
+}
+
+.resultContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 24px 32px 24px;
+    padding: 35px 23px;
+    width: 414px;
+    height: 418px;
+    background: #00474B;
+    border-radius: 15px;
+}
+
+.resultContainer .result{
+    width: 334px;
+    height: 71px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result .resultText h3{
+    font-family: 'Space Mono', monospace;
+    color: white;
+    font-weight: 700;
+    line-height: 23.7px;
+}
+
+.result .resultText p{
+    font-family: 'Space Mono', monospace;
+    color: rgba(127, 157, 159, 1);
+    font-weight: 700;
+    
+}
+
+.resultContainer .resultAmountPerson{
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 71px;
+    color: rgba(38, 194, 174, 1);
+}
+
+.restButton{
+    width: 334px;
+    height: 48px;
+    background-color: rgba(38, 194, 174, 1);
+    border-radius: 4px;
+    margin-top: 122px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(0, 71, 75, 1);
+    text-align: center;
+    padding: 10px 30px;
+    cursor: pointer;
+}
