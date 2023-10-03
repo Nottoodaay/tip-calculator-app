@@ -1,32 +1,36 @@
 import React from 'react'
+import '../../App.css'
 
 export const Results = ({bill, setBill , percent, setPercent, setPersonQuantity,personQuantity}) => {
 
     const countTipAmountPerson = (bill, percent, person) =>{
-        const persentCount =  bill * (percent/100)
-        const persentPerPerson = persentCount / person
-        if(persentPerPerson){
-          return persentPerPerson
+        if(bill > 0 && percent > 0 && person > 0){
+          const persentCount =  bill * (percent/100)
+          const persentPerPerson = persentCount / person
+          return Math.floor(persentPerPerson) 
         }else{
-          return '$0.00'
+          return '0'
         }
       }
     
       const countTotal = (bill, percent, person) =>{
-        const tipAmount = ((bill / 100) * percent) / person
-        const total = (bill / person) + tipAmount
-        if(total){
-          return total
+        if(bill > 0 && percent > 0 && person > 0){
+          const tipAmount = ((bill / 100) * percent) / person
+          const total = (bill / person) + tipAmount
+          return Math.floor(total) 
         }else{
-          return '$0.00'
+          return '0'
         }
       }
 
       const resetState = () =>{
-       setBill(0)
-       setPercent(0)
-       setPersonQuantity(0)
+       setBill('')
+       setPercent('')
+       setPersonQuantity('')
       }
+
+      const resultAmountPerson = 
+        bill.length > 26 || personQuantity.length > 26 ? 'resultAmountPerson smaller-font-result' : 'resultAmountPerson'
 
   return (
     <div className='resultContainer'>
@@ -36,8 +40,8 @@ export const Results = ({bill, setBill , percent, setPercent, setPersonQuantity,
           <p>/ person</p>
         </div>
 
-        <div className='resultAmountPerson'>
-          { countTipAmountPerson(bill, percent, personQuantity)}
+        <div className={resultAmountPerson}>
+          { `$${countTipAmountPerson(bill, percent, personQuantity)}.00`}
         
         </div>
       </div>
@@ -47,8 +51,8 @@ export const Results = ({bill, setBill , percent, setPercent, setPersonQuantity,
         <h3>Total</h3>
         <p>/ person</p>
       </div>
-      <div className='resultAmountPerson' >
-        {countTotal(bill, percent, personQuantity)}
+      <div className={resultAmountPerson} >
+        {`$${countTotal(bill, percent, personQuantity)}.00`}
       </div>
     </div>
       

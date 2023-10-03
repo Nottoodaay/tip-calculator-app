@@ -4,17 +4,21 @@ import { Properties } from './components/properties/Properties'
 import { Results } from './components/results/Results'
 
 function App() {
-  const [bill, setBill] = useState(0)
-  const [percent, setPercent] = useState(0)
-  const [personQuantity, setPersonQuantity ] = useState(0)
+  const [bill, setBill] = useState('')
+  const [percent, setPercent] = useState('')
+  const [personQuantity, setPersonQuantity ] = useState('')
 
 
   return (
-    <body>
+    <div className='body'>
+      <div className='logo'>S P L I <br/> T T E R</div>
+
       <div className='appContainer'>
         <Properties 
           setBill={setBill}
+          bill={bill}
           setPercent={setPercent}
+          personQuantity={personQuantity}
           setPersonQuantity={setPersonQuantity}
           />
 
@@ -27,7 +31,7 @@ function App() {
         setPersonQuantity={setPersonQuantity}
         />
       </div>
-    </body>
+    </div>
   )
 }
 

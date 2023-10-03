@@ -2,12 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body{
+    background-color: rgba(197, 228, 231, 1);
+}
+
+.body{
     display: flex;
     justify-content: center;
-    background-color: rgba(197, 228, 231, 1);
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    width: 86px;
+    height: 54px;
+    margin-top: 50px;
+
+    color: rgba(61, 102, 102, 1);
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
 }
 
 
@@ -19,6 +36,7 @@ body{
     align-items: center;
     background-color: white;
     border-radius: 20px;
+    margin-top: 80px;
 }
 
 
@@ -49,14 +67,36 @@ body{
     color: #00474B;
 }
 
+.smaller-font{
+    font-size: 12px!important;
+}
+
+.inputGuide{
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 16px;
+    color: rgba(94, 122, 125, 1);
+}
+
+.inputGuidePercent{
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 16px;
+    color: rgba(94, 122, 125, 1);
+
+    margin-left: 48px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
 .percentContainer{
     width: 400px;
     height: 152px;
     margin-left: 48px;
     display: flex;
     flex-wrap: wrap;
-    
 }
+
 
 .percentContainer .percent{
     cursor: pointer;
@@ -175,4 +215,106 @@ body{
     text-align: center;
     padding: 10px 30px;
     cursor: pointer;
+}
+
+.smaller-font-result{
+    font-size: 18px!important;
+}
+
+/* hoovers */
+
+
+.percent:hover{
+    background-color: rgba(159, 232, 223, 1);
+    color: rgba(0, 71, 75, 1);
+}
+
+
+.restButton:hover{
+    background-color: rgba(159, 232, 223, 1);
+    color: rgba(0, 71, 75, 1);
+}
+
+
+
+/* responsive */
+
+@media screen and (max-width: 376px) {
+    .appContainer{
+        width: 375px;
+        height: 100%;
+        flex-direction: column; 
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .billContainer{
+        width: 312px;
+        height: 70px;
+        margin: 30px;
+    }
+
+    .billContainer input{
+        width: 310px;
+        height: 48px;
+    }
+
+    .inputGuidePercent{
+        margin: 30px;
+    }
+
+    .percentContainer{
+        width: 312px;
+        height: 216px;
+        margin: 30px;
+    }
+
+    .percentContainer .percent{
+        width: 142px;
+    }
+
+    .percentContainer .custom{
+        width: 142px;
+    }
+
+    .personContainer{
+        width: 312px;
+        height: 70px;
+        margin: 30px;
+    }
+
+    .personContainer input{
+        width: 310px;
+        height: 48px;
+    }
+    
+    .resultContainer{
+        width: 328px;
+        height: 258px;
+        margin: 30px;
+    }
+
+    .resultContainer .result{
+        width: 280px;
+        height: 48px;
+    }
+
+    .resultText h3{
+        font-size: 16px;
+    }
+
+    .resultText p{
+        font-size: 13px;
+    }
+
+    .resultAmountPerson{
+        font-size: 32px;
+    }
+
+    .restButton{
+        width: 280px;
+        height: 48px;
+        font-size: 20px;
+        margin-top: 32px;
+    }
 }
